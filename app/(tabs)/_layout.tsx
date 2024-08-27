@@ -21,7 +21,7 @@ export default function TabLayout() {
           )
         }}/>
         < Tabs.Screen
-        name='affarmation'
+        name='affirmations'
         options={
          { tabBarLabel:"Affirmations",
           tabBarIcon:(({color})=>(
