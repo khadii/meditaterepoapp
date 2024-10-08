@@ -1,13 +1,16 @@
-import { View, Text, FlatList, Pressable,Image } from 'react-native'
-import React from 'react'
-import { GalleryPreviewData } from './Models/affirmationcategories';
-import { Link } from 'expo-router';
-import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
-interface GuidedAffirmationGallery{
-    title:string;
-    previews:GalleryPreviewData[]
+import { View, Text, FlatList, Pressable, Image } from "react-native";
+import React from "react";
+import { GalleryPreviewData } from "./Models/affirmationcategories";
+import { Link } from "expo-router";
+import { scale, verticalScale, moderateScale } from "react-native-size-matters";
+interface GuidedAffirmationGallery {
+  title: string;
+  previews: GalleryPreviewData[];
 }
-export default function Guidedaffirmationgallerry({title,previews}:GuidedAffirmationGallery) {
+export default function Guidedaffirmationgallerry({
+  title,
+  previews,
+}: GuidedAffirmationGallery) {
   return (
     <View className="my-5">
       <View>
@@ -20,7 +23,7 @@ export default function Guidedaffirmationgallerry({title,previews}:GuidedAffirma
             renderItem={({ item }) => (
               <Link href={`/affirmations/${item.id}`} asChild>
                 <Pressable>
-                  <View className="h-36 w-32 rounded-md mr-4 ">
+                  <View className="h-36 w-32 rounded-md mr-4 md:h-44 md:w-60 lg:h-52 lg:w-80">
                     <Image
                       source={item.image}
                       resizeMode="cover"

@@ -25,7 +25,7 @@ const AFFIRMATION_GALLERY = [
                 image: images.californiaBackyardFour,
             },
         ],
-    },
+    }, 
     {
         title: "Reduce Anxiety",
         data: [
