@@ -1,9 +1,9 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView, StatusBar, Platform } from 'react-native'
 import React from 'react'
 
-export default function Content({children}:{children:any}) {
+export default function Content({ children }: { children: any }) {
   return (
-    <SafeAreaView className='flex-1 px-5 py-3'>
+    <SafeAreaView style={{ flex: 1, paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, paddingHorizontal: 20, paddingVertical: 12 }}>
       {children}
     </SafeAreaView>
   )
